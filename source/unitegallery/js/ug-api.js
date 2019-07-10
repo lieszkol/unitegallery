@@ -213,6 +213,14 @@ function UG_API(gallery){
 	
 	}
 	
+	this.openLightbox = function(index){
+		
+		var lightbox = g_gallery.getLightbox();
+		if(!lightbox)
+			return(false);
+		
+		lightbox.open(index);		
+	}
 	
 	/**
 	 * resize the gallery to some width (height).

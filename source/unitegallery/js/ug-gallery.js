@@ -100,7 +100,7 @@ function UniteGalleryMain(){
 	var t = this;
 	var g_galleryID;
 	var g_objGallery = jQuery(t), g_objWrapper, g_objParent;
-	var g_objThumbs, g_objSlider, g_functions = new UGFunctions(), g_objTabs, g_objLoadMore;
+	var g_objThumbs, g_objSlider, g_lightbox, g_functions = new UGFunctions(), g_objTabs, g_objLoadMore;
 	var g_arrItems = [], g_numItems, g_selectedItem = null, g_selectedItemIndex = -1;
 	var g_objTheme, g_objCache = {};
 	
@@ -245,6 +245,7 @@ function UniteGalleryMain(){
 		 g_objSlider = undefined;
 		 g_objThumbs = undefined;
 		 g_objSlider = undefined; 
+		 g_lightbox = undefined;
 	}
 	
 	
@@ -1452,7 +1453,8 @@ function UniteGalleryMain(){
 			g_objSlider:g_objSlider,
 			g_options:g_options,
 			g_arrItems:g_arrItems,
-			g_numItems:g_numItems
+			g_numItems:g_numItems,
+			g_lightbox:g_lightbox
 		};
 		
 		return(objects);
@@ -1464,6 +1466,14 @@ function UniteGalleryMain(){
 	this.getObjSlider = function(){
 		
 		return(g_objSlider);
+	}
+
+	this.getLightbox = function() {
+		return (g_lightbox);
+	}
+
+	this.setLightbox = function(lightbox) {
+		g_lightbox = lightbox;
 	}
 	
 	

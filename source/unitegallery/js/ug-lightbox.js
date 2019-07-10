@@ -160,7 +160,7 @@ function UGLightbox(){
 		else
 			g_objTextPanel = null;
 		
-		
+		g_gallery.setLightbox(t);
 	}
 	
 	
